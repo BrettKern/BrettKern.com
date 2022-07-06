@@ -2,6 +2,7 @@ const ejs = require('ejs')
 const partials = require('express-partials')
 const express = require('express')
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 var app = express();
 
 var routes = require('./routes/index.js');
