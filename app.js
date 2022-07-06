@@ -1,6 +1,7 @@
 const ejs = require('ejs')
 const partials = require('express-partials')
 const express = require('express')
+const bodyParser = require('body-parser')
 var app = express();
 
 var routes = require('./routes/index.js');
@@ -8,8 +9,8 @@ var routes = require('./routes/index.js');
 app.use(partials());
 app.engine('html', require('ejs').renderFile); //renders .ejs as html
 
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+app.set('views', './views');
+app.use(express.static('./public'));
 
 app.use(express.bodyParser()); //deals with incoming request objects
 app.use(express.methodOverride());
