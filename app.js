@@ -26,7 +26,7 @@ app.use(express.static('./public'));
 
 app.get('/', routes.main);
 
-var port = 4040;
+var port = 80;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
