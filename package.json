@@ -1,23 +1,13 @@
 {
-  "name": "template",
-  "author": {
-    "name": "Nicholas Johnson",
-    "email": "nejohnson2@gmail.com",
-    "url": "http://www.nejohnson2.com"
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "First Last <first.last@example.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
   },
-  "version": "0.0.1",
   "dependencies": {
-    "body-parser": "^1.20.0",
-    "ejs": "^3.1.8",
-    "error-handler": "^1.0.0",
-    "express": "3.x",
-    "express-partials": "latest",
-    "logger": "^0.0.1",
-    "method-override": "^3.0.0",
-    "mongoose": "3.5.6"
-  },
-  "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
+    "express": "^4.16.1"
   }
 }

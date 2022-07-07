@@ -1,6 +1,20 @@
-FROM node:12.9.1
-RUN npm install ejs express-partials express body-parser method-override logger error-handler
-COPY . /build-context
-WORKDIR /build-context
-EXPOSE 180
+FROM node:16
+
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+
+RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
+
+# Bundle app source
+COPY . .
+
+EXPOSE 8080
+
 CMD [ "node", "app.js" ]
